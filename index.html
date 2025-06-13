@@ -71,7 +71,7 @@
 				<div class="row g-5">
 					<div class="col-12 col-xl-10 col-xxl-8">
 						<h1 class="hero-text">
-							<span>Creative Web</span>
+							<span id="typewriter"></span>
 							<span class="stroke-text size" style="font-size: 100px;"> Solutions By<BR> <SPAN style="font-size: 60px;">Fiona Zeerak</SPAN></span>
 						</h1>
 						<div class="row g-4 mt-md-1 mt-lg-2">
@@ -575,5 +575,42 @@
 		<script src="assets/plugins/jquery.min.js"></script>
 		<script src="assets/plugins/plugins.js"></script>
 		<script src="assets/js/functions.js"></script>
+<script>
+  const phrases = ["Creative Web", "Creative Design"];
+  const speed = 100;
+  const eraseSpeed = 50;
+  const delay = 1000;
+
+  const typewriter = document.getElementById("typewriter");
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function loopTypewriter() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (!isDeleting && charIndex <= currentPhrase.length) {
+      typewriter.innerHTML = currentPhrase.substring(0, charIndex);
+      charIndex++;
+      setTimeout(loopTypewriter, speed);
+    } else if (isDeleting && charIndex >= 0) {
+      typewriter.innerHTML = currentPhrase.substring(0, charIndex);
+      charIndex--;
+      setTimeout(loopTypewriter, eraseSpeed);
+    } else {
+      isDeleting = !isDeleting;
+
+      if (!isDeleting) {
+        phraseIndex = (phraseIndex + 1) % phrases.length; // Move to next phrase
+      }
+
+      setTimeout(loopTypewriter, delay);
+    }
+  }
+
+  window.onload = loopTypewriter;
+</script>
+
 	</body>
 </html>

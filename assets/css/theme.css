@@ -2929,3 +2929,7 @@ body.loaded:after {
 .theme-light .link-hover-2:before {
   opacity: 0.25;
 }
+.hero-text #typewriter {
+    font-size: 5rem;
+    min-height: 100px;
+}
