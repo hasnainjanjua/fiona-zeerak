@@ -1,0 +1,276 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    color: #555;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+h2.title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2.title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    /* CHANGED: Replaced blue with the new gradient */
+    background: linear-gradient(45deg, #2fbdff 20%, #ff7582 80%);
+    border-radius: 2px;
+}
+
+h4.maintitle {
+    font-size: 1.75rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    /* border-bottom: 2px solid #e0e0e0; */
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    display: inline-block;
+    background:  linear-gradient(45deg, #2fbdff 0%, #ff7582 100%);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+p.description {
+    line-height: 1.8;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.main-page-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.rn-resume-area {
+    padding: 60px 0;
+}
+
+.section-separator {
+    /* border-top: 1px solid #e0e0e0; */
+}
+
+
+.section-title.text-center {
+    margin-bottom: 40px;
+}
+
+.nav-tabs {
+    /* border-bottom: 2px solid #dee2e6; */
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.nav-tabs .nav-item {
+    margin: 0 10px;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+   border-bottom: 4px solid transparent;
+    border-image:  linear-gradient(45deg, #2fbdff 20%, #ff7582 80%);
+    border-image-slice: 1;
+    background: linear-gradient(45deg, #2fbdff 20%, #ff7582 80%); 
+  -webkit-background-clip: text;  
+  background-clip: text;
+  color: transparent;
+    background-color: #ecf0f3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.tab-content .personal-experience-inner {
+    padding: 20px;
+    /* background-color: #ffffff; */
+    border-radius: 10px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); */
+}
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.resume-single-list {
+    padding: 25px;
+    background-color: #f8f9fa;
+    /* border-left: 4px solid #2fbdff; */
+    border-left: 4px solid transparent;
+    border-image:  linear-gradient(45deg, #2fbdff 0%, #ff7582 100%);
+    border-image-slice: 1;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    height: 100%; 
+}
+
+.resume-single-list:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.resume-single-list .inner .heading .title h4 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.resume-single-list .inner .heading .title span {
+    color: #888;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.progress-wrapper .content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.progress-charts .heading.heading-h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress {
+    height: 4px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    overflow: hidden; 
+}
+
+.progress-bar {
+    background:  linear-gradient(45deg, #2fbdff 0%, #ff7582 100%);
+    border-radius: 10px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    width: 0; 
+    animation: animate-progress-bar 1.5s ease-in-out forwards;
+}
+
+.progress-bar::after {
+    content: attr(aria-valuenow) '%';
+    position: absolute;
+    left: 15px; 
+    top: -30px;
+    background-color: #333;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0; 
+    animation: show-percentage 0.5s 1s forwards; 
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    left: 20px; 
+    top: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    opacity: 0;
+    animation: show-percentage 0.5s 1s forwards;
+}
+@media (max-width: 768px) {
+    h2.title {
+        font-size: 2.5rem;
+    }
+    .nav-tabs .nav-link {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    .col-lg-6.col-md-12.col-12 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 0 10px;
+    }
+    h2.title {
+        font-size: 2rem;
+    }
+    .nav-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-tabs .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+    .main-page-wrapper {
+        margin: 20px auto;
+    }
+}
+
+@keyframes animate-progress-bar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
+
+@keyframes show-percentage {
+    from {
+        opacity: 0;
+        top: -40px;
+    }
+    to {
+        opacity: 1;
+        top: -30px;
+    }
+}
+
+.progress-bar {
+    --progress-width: var(--aria-valuenow, 0);
+    animation: animate-progress-bar 1.5s ease-out forwards;
+}
+
+body:not(script) .progress-bar[style*="width"] {
+    --progress-width: 0; 
+}
+body:not(script) .progress .progress-bar[style*="width: 100%"] { --progress-width: 100%; }
+body:not(script) .progress .progress-bar[style*="width: 95%"] { --progress-width: 95%; }
+body:not(script) .progress .progress-bar[style*="width: 90%"] { --progress-width: 90%; }
+body:not(script) .progress .progress-bar[style*="width: 85%"] { --progress-width: 85%; }
