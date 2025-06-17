@@ -90,7 +90,7 @@ p.description {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:hover {
    background:  linear-gradient(45deg, #2fbdff 0%, #ff7582 100%);
-    color: #fff;
+    color: #fff !important;
     border-radius: 30px;
 }
 
