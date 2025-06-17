@@ -68,6 +68,7 @@ p.description {
     /* border-bottom: 2px solid #dee2e6; */
     justify-content: center;
     margin-bottom: 40px;
+    --bs-nav-tabs-border-width:0;
 }
 
 .nav-tabs .nav-item {
@@ -92,6 +93,7 @@ p.description {
     color: #fff;
     border-radius: 30px;
 }
+
 .tab-content .personal-experience-inner {
     padding: 20px;
     /* background-color: #ffffff; */
