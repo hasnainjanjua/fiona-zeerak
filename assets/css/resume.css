@@ -80,7 +80,7 @@ p.description {
     padding: 10px 20px;
     font-size: 1.1rem;
     /* font-weight: 600; */
-    color: #ffffff;
+    color: #181a1c;
     transition: all 0.3s ease;
     background-color: #ffffff;
     border-radius: 30px;
@@ -88,8 +88,8 @@ p.description {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:hover {
-  color: #ffffff; 
-    background-image:linear-gradient(45deg, #2fbdff 20%, #ff7582 80%);
+   background:  linear-gradient(45deg, #2fbdff 0%, #ff7582 100%);
+    color: #fff;
     border-radius: 30px;
 }
 .tab-content .personal-experience-inner {
