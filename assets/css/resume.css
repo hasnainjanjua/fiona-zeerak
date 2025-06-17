@@ -60,15 +60,6 @@ p.description {
     padding: 20px;
 }
 
-.rn-resume-area {
-    /* padding: 60px 0; */
-}
-
-.section-separator {
-    /* border-top: 1px solid #e0e0e0; */
-}
-
-
 .section-title.text-center {
     margin-bottom: 40px;
 }
@@ -85,27 +76,21 @@ p.description {
 
 .nav-tabs .nav-link {
     border: none;
-    border-bottom: 3px solid transparent;
-    padding: 15px 25px;
+    /* border-bottom: 3px solid transparent; */
+    padding: 10px 20px;
     font-size: 1.1rem;
-    font-weight: 600;
-    color: #555;
+    /* font-weight: 600; */
+    color: #ffffff;
     transition: all 0.3s ease;
-    background-color: transparent;
+    background-color: #ffffff;
+    border-radius: 30px;
 }
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:hover {
-   border-bottom: 4px solid transparent;
-    border-image:  linear-gradient(45deg, #2fbdff 20%, #ff7582 80%);
-    border-image-slice: 1;
-    background: linear-gradient(45deg, #2fbdff 20%, #ff7582 80%); 
-  -webkit-background-clip: text;  
-  background-clip: text;
-  color: transparent;
-    background-color: #ecf0f3;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+  color: #ffffff; 
+    background-image:linear-gradient(45deg, #2fbdff 20%, #ff7582 80%);
+    border-radius: 30px;
 }
 .tab-content .personal-experience-inner {
     padding: 20px;
